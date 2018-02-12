@@ -1,7 +1,7 @@
 This site was created from a template (called "Bootstrap - Creative") and should be more self-explanatory than the wordpress site. The rest of this README was created by the original template developer. Looks like there are some instructions below on working with npm so feel free to have at that if you like.
 
-Test Site: dev.brodienation.com
-Live/Production Site: brodienation.com
+Test Site: http://dev.brodienation.com
+Live/Production Site: http://brodienation.com
 
 # [Start Bootstrap - Creative](https://startbootstrap.com/template-overviews/creative/)
 
