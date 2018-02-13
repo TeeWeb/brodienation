@@ -103,30 +103,28 @@ img::-moz-selection {
   font-family: 'Aladin', cursive;
 }
 
-#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+#mainNav .navbar-brand:focus, 
+#mainNav .navbar-brand:hover {
   color: #f05f40;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus,
-#mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link {
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+  border: 0px;
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #212529;
+  background-color: transparent;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover,
-#mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link:hover,
-#mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link:focus:hover {
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
   color: #F05F40;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active,
-#mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link.active,
-#mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link:focus.active {
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
   color: #F05F40 !important;
   background-color: transparent;
 }
@@ -183,7 +181,6 @@ img::-moz-selection {
 
 /*** Dropdown Menu for Previous BrodieNations nav-item ***/
 .dropdown {
-    position: relative;
     display: inline-block;
 }
 
@@ -192,26 +189,31 @@ img::-moz-selection {
     position: absolute;
     background-color: rgba(240, 95, 64, 1);
     border-radius: 5px;
-    min-width: 160px;
+    min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin: 0;
     padding: 12px 16px;
-    z-index: 2;
+    z-index: 1;
     color: #fff;
-}
-
-.dropdown-content li {
-    list-style: none;
+    right: 0;
     text-align: center;
+    padding: 0;
 }
 
-.dropdown-content > li.nav-item > a.nav-link {
+.dropdown-content a {
+    margin: 0;
     color: #fff;
+    display: block;
+    border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-content,
 .dropdown:active .dropdown-content {
     display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: black;
 }
 
 @media (min-width: 992px) {
@@ -225,20 +227,15 @@ img::-moz-selection {
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #F05F40;
   }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link,
-  #mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link {
+  #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;
   }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link,
-  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus,
-  #mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link,
-  #mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link:focus {
+  #mainNav .navbar-nav > li.nav-item a.nav-link,
+  #mainNav .navbar-nav > li.nav-item a.nav-link:focus {
     color: rgba(255, 255, 255, 1);
   }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
-  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover,
-  #mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link:hover,
-  #mainNav .navbar-nav > li.nav-item > span.dropdown > a.nav-link:focus:hover {
+  #mainNav .navbar-nav > li.nav-item a.nav-link:hover,
+  #mainNav .navbar-nav > li.nav-item a.nav-link:focus:hover {
     color: #F05F40;
   }
   #mainNav.navbar-shrink {

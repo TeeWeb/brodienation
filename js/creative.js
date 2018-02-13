@@ -19,6 +19,14 @@
   $('.js-scroll-trigger').click(function() {
     $('.navbar-collapse').collapse('hide');
   });
+    
+  $('.dropdown').click(function() {
+      if($('.dropdown-content').display() == 'none') {
+          $('.dropdown-content').css('display', 'block');
+      } else {
+          $('.dropdown-content').collapse('hide')
+      }
+  });
 
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
