@@ -126,6 +126,50 @@ img::-moz-selection {
   background-color: transparent;
 }
 
+#pageNav {
+  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+  background-color: #fff;
+  font-family: 'Aladin', cursive;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #F05F40;
+  font-family: 'Aladin', cursive;
+}
+
+#pageNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #f05f40;
+}
+
+#pageNav .navbar-nav > li.nav-item > a.nav-link,
+#pageNav .navbar-nav > li.nav-item > a.nav-link:focus {
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #212529;
+}
+
+#pageNav .navbar-nav > li.nav-item > a.nav-link:hover,
+#pageNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+  color: #F05F40;
+}
+
+#pageNav .navbar-nav > li.nav-item > a.nav-link.active,
+#pageNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+  color: #F05F40 !important;
+  background-color: transparent;
+}
+
+#pageNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+#pageNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+  background-color: transparent;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
@@ -171,12 +215,19 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+header.masthead#home {
+  background-image: url("../img/header.jpg");
+}
+
+header.masthead#prev {
+  background-image: url("../img/beach.jpg");
 }
 
 header.masthead hr {
